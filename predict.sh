@@ -2,7 +2,7 @@ source /apps01/anaconda3/etc/profile.d/conda.sh
 conda activate venv_pnet
 
 pdb=$1
-dir=/data02/daniel/masif/site/data_preparation/01-benchmark_pdbs
+dir=/data02/daniel/masif/masif_ligand/data_preparation/01-benchmark_pdbs
 pdbPath=$dir/$pdb.pdb
 outdir=/data02/daniel/PUresNet/site_predictions
 
