@@ -1,6 +1,7 @@
+import tensorflow as tf
+
 import os 
 import pybel
-import tensorflow as tf 
 import ResNet
 import argparse
 
