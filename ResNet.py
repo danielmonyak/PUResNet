@@ -171,10 +171,16 @@ class PUResNet(Model):
         density, origin, step = self.pocket_density_from_mol(mol)
         pockets = self.get_pockets_segmentation(density, **pocket_kwargs)
         i=0
-        for pocket_label in range(1, pockets.max() + 1):
+        
+        pocket_label_arr = np.unique(pockets)
+        
+        for pocket_label in pocket_label_arr[pocket_label_arr > 0]
             indices = np.argwhere(pockets == pocket_label).astype('float32')
             indices *= step
             indices += origin
+            
+            np.savetxt(path+'/pocket'+str(i)+'.txt', indices)
+            
             mol=openbabel.OBMol()
             for idx in indices:
                 a=mol.NewAtom()
