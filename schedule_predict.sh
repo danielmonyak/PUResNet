@@ -19,7 +19,7 @@ while read p; do
        	PDBID=$(echo $FIELD1| cut -d"_" -f1)
       	CHAIN1=$(echo $FIELD1| cut -d"_" -f2)
        	CHAIN2=$(echo $FIELD1| cut -d"_" -f3)
- 	./predict.py $PDBID\_$CHAIN1\_$CHAIN2 > $out/$p.out 2>&1 &
+ 	./predict.sh $PDBID\_$CHAIN1\_$CHAIN2 > $out/$p.out 2>&1 &
 	disown -h $!
 	running+=($!)
 	i=$((i+1))
