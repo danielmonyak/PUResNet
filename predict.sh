@@ -4,6 +4,7 @@ conda activate venv_pnet
 pdb=$1
 dir=/data02/daniel/masif/site/data_preparation/01-benchmark_pdbs
 pdbPath=$dir/$pdb.pdb
+outdir=/data02/daniel/PUresNet/site_predictions
 
 python predict.py \
 -ftype pdb -m 0 \
