@@ -44,6 +44,9 @@ def main():
     if args.mode==0:
         mol=next(pybel.readfile(args.file_format,args.input_path))
         o_path=os.path.join(args.output_path,os.path.basename(args.input_path))
+        
+        o_path = o_path.rstrip('.' + args.file_format)
+
         if not os.path.exists(o_path):
             os.mkdir(o_path)
         model.save_pocket_mol2(mol,o_path,args.output_format)
