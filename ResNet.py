@@ -1,8 +1,8 @@
 # import tensorflow as tf
-from keras.models import Model
-from keras.layers import Input,Convolution3D,MaxPooling3D,UpSampling3D,concatenate,BatchNormalization,Activation,Add,Concatenate
-from keras import backend as K
-from keras.regularizers import l2
+from tf.keras.models import Model
+from tf.keras.layers import Input,Convolution3D,MaxPooling3D,UpSampling3D,concatenate,BatchNormalization,Activation,Add,Concatenate
+from tf.keras import backend as K
+from tf.keras.regularizers import l2
 from skimage.segmentation import clear_border
 from skimage.morphology import closing
 from tfbio.data import Featurizer
