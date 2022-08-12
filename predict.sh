@@ -10,5 +10,5 @@ python predict.py \
 -ftype pdb -m 0 \
 -i $pdbPath \
 -mpath whole_trained_model1.hdf \
--otype mol2 -o output_folders \
--gpu 3 > predict.out 2>predict.err
+-otype mol2 -o $outdir \
+-gpu 0

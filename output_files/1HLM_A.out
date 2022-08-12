@@ -1,9 +1,9 @@
-2022-08-12 01:19:35.629046: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
-2022-08-12 01:19:35.634472: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
-2022-08-12 01:19:47.400409: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
-2022-08-12 01:19:47.416273: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
-2022-08-12 01:19:47.612099: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
-2022-08-12 01:19:47.629626: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
+2022-08-12 01:29:42.634477: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2022-08-12 01:29:42.634864: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2022-08-12 01:30:37.200455: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
+2022-08-12 01:30:37.412643: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
+2022-08-12 01:30:39.820428: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
+2022-08-12 01:30:40.044283: E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:666] Iteration = 1, topological sort failed with message: The graph couldn't be sorted in topological order.
 /apps01/anaconda3/envs/venv_pnet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
 /apps01/anaconda3/envs/venv_pnet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:524: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
@@ -17,13 +17,3 @@
 /apps01/anaconda3/envs/venv_pnet/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:532: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
 Using TensorFlow backend.
-Traceback (most recent call last):
-  File "predict.py", line 62, in <module>
-    main()
-  File "predict.py", line 52, in main
-    model.save_pocket_mol2(mol,o_path,args.output_format)
-  File "/home/daniel.monyak/software/PUResNet/ResNet.py", line 189, in save_pocket_mol2
-    p_mol.write(format,path+'/pocket'+str(i)+'.'+format)
-  File "/apps01/anaconda3/envs/venv_pnet/lib/python3.6/site-packages/pybel.py", line 539, in write
-    "overwrite it.") % filename)
-OSError: output_folders/1A9X_AB/pocket0.mol2 already exists. Use 'overwrite=True' to overwrite it.
